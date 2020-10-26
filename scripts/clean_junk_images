@@ -1,0 +1,3 @@
+#!/bin/bash
+
+grep_images \<none\> | awk '{print $3}' | xargs -r docker rmi -f

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+ARGS=$@
+
+foreach_repo git grep -Ini $ARGS

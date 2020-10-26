@@ -1,0 +1,7 @@
+#!/bin/bash
+
+GREP_OUTPUT=$1
+
+VIM_ARGS=$(echo $GREP_OUTPUT | awk -F ":" '(print $1" +"$2)')
+
+vim $VIM_ARGS

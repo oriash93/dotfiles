@@ -1,0 +1,5 @@
+#!/bin/bash
+
+COMMAND=$@
+
+git stash && $COMMAND && git stash pop
