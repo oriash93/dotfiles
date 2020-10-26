@@ -1,10 +1,12 @@
 #!/bin/bash
 
 # Meta
-alias edit_aliases='vim ~/.bash_aliases'
 alias edit_bashrc='vim ~/.bashrc'
+alias edit_aliases='vim ~/.bash_aliases'
+alias reload_bashrc='source ~/.bashrc'
 alias reload_aliases='source ~/.bash_aliases'
-alias show_aliases='echo; cat ~/.bash_aliases;'
+alias show_bashrc='echo; cat ~/.bashrc'
+alias show_aliases='echo; cat ~/.bash_aliases'
 
 # Git stuff
 alias gs='git status'
@@ -47,12 +49,5 @@ alias histg="history | grep"
 # Get your current IP
 alias myip="curl http://ipecho.net/plain; echo"
 
-# Example alias for SSH'ing into a server
-alias myserver="ssh user@111.111.111.111"
-
-alias reps='cd D:\Repositories'
-alias scripts='cd D:\Scripts'
-
-# Other aliases
-alias node='winpty node.exe'
-alias nlg='npm list -g --depth=0'
+alias reps="cd ${REPOSITORIES}"
+alias scripts="cd ${SCRIPTS}"
