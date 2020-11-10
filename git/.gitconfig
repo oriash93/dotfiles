@@ -1,7 +1,7 @@
 [alias]
 	graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white) %s%C(reset) %C(bold yellow) - %an%C(reset)%C(bold red)%d%C(reset)'
 	pr = pull --rebase
-	amend = commit --amend
+	amend = commit --amend --no-edit
 	qam = commit --amend --no-verify --no-edit
 	tmp = commit --no-verify -m
 	rom = rebase -i origin/master
