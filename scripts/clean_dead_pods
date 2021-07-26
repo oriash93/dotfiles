@@ -1,0 +1,16 @@
+#!/bin/bash
+
+EVICTED=`kubectl get pods | awk '/Evicted/ {print $1}'`
+NODE_AFFINITY=`kubectl get pods | awk '/NodeAffinity/ {print $1}'`
+
+if [ ! -z "${EVICTED}" ]; then
+	echo "Found `echo "$EVICTED" | wc -l` pods in status Evicted.";
+	echo "Deleting..."
+	$EVICTED | xargs -r kubectl delete pod
+fi
+
+if [ ! -z "${NODE_AFFINITY}" ]; then
+	echo "Found `echo "$NODE_AFFINITY" | wc -l` pods in status NodeAffinity.";
+	echo "Deleting..."
+	$NODE_AFFINITY | xargs -r kubectl delete pod
+fi
