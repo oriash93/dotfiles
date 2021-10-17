@@ -11,7 +11,7 @@
 [pull]
 	rebase = false
 [fetch]
-	prune = false
+	prune = true
 [rebase]
 	autoStash = false
 [credential]
