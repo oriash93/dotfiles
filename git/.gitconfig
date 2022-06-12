@@ -2,10 +2,9 @@
 	graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white) %s%C(reset) %C(bold yellow) - %an%C(reset)%C(bold red)%d%C(reset)'
 	pr = pull --rebase
 	amend = commit --amend --no-edit
-	qam = commit --amend --no-verify --no-edit
-	tmp = commit --no-verify -m
-	rom = rebase -i origin/master
-	far-master = !git fetch && git checkout -f master && git reset --hard origin/master
+	rom = rebase -i origin/main
+	br = branch --format='%(HEAD) %(color:bold red)%(refname:short)%(color:reset) - %(color:bold green)(%(committerdate:relative)) %(color:reset)%(contents:subject) %(color:bold yellow)- %(authorname)' --sort=-committerdate
+	review = !git push origin HEAD -u
 [core]
 	editor = \"C:/Program Files (x86)/notepad++/notepad++.exe\" -multiInst -nosession
 [pull]
