@@ -8,7 +8,7 @@ alias reload_aliases='source ~/.bash_aliases'
 alias show_bashrc='echo; cat ~/.bashrc'
 alias show_aliases='echo; cat ~/.bash_aliases'
 
-# Git stuff
+# Git
 alias gs='git status'
 alias gg='git graph'
 alias gd='git diff'
@@ -19,8 +19,8 @@ alias cdgit='cd `git rev-parse --show-toplevel`'
 
 # Ideal directory listing
 alias l=ls
-alias ls="ls --color=auto"
-alias ll="ls -laFG"
+alias ls='ls --color=auto'
+alias ll='ls -laFG'
 # -l list in long format
 # -F Display a...
 #       slash (`/') immediately after each pathname that is a directory,
@@ -37,17 +37,19 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 
+# No error if existing, make parent directories as needed
 alias mkdir='mkdir -p'
+
 alias ..='cd ..'
 
 # Pretty-print of PATH variable
 alias path='echo -e ${PATH//:/\\n}'
 
 # Search history. Example usage: `histg git` to recent commands that use git
-alias histg="history | grep"
+alias histg='history | grep'
 
 # Get your current IP
-alias myip="curl http://ipecho.net/plain; echo"
+alias myip='curl http://ipecho.net/plain; echo'
 
-alias reps="cd ${REPOSITORIES}"
-alias scripts="cd ${SCRIPTS}"
+# Docker
+alias docker='sudo docker'
