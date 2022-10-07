@@ -1,9 +1,8 @@
 install_dotfile () {
     IFS='/'
     read -a arr <<< "$1"
-
-    cp ~/${arr[1]} ~/${arr[1]}.backup
-    cp "$1" ~/${arr[1]}
+    
+    cp --backup "$1" ~/${arr[1]}
 }
 
 prompt_install () {
