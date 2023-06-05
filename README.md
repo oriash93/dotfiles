@@ -1,2 +1,2 @@
 # dotfiles
-My dotfiles and scripts
+My collection of dotfiles
