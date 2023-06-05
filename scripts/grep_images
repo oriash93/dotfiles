@@ -1,5 +1,0 @@
-#!/bin/bash
-
-ARGS=$@
-
-docker images | grep $ARGS

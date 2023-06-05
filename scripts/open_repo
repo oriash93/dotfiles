@@ -1,9 +1,0 @@
-#!/bin/bash
-
-REPO_URL=`git ls-remote --get-url origin | awk -F '@' '{print $2}' | awk -F '.git' '{print $1}'`
-BRANCH_NAME=`git branch --show-current`
-
-URL=$REPO_URL/src/develop
-echo Opening $URL ...
-
-start chrome $URL

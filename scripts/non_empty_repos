@@ -1,8 +1,0 @@
-#!/bin/bash
-
-for repo in `ls`;
-do
-	pushd $repo >> /dev/null
-	[[ "$(git status -s | wc -l)" == "0" ]] || echo "${repo}/"
-	popd >> /dev/null
-done

@@ -23,6 +23,7 @@ prompt_install () {
 # bash
 prompt_install bash/.bashrc
 prompt_install bash/.bash_aliases
+prompt_install bash/.bash_functions
 
 # git
 prompt_install git/.gitconfig
