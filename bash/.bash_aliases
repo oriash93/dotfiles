@@ -50,6 +50,3 @@ alias histg='history | grep'
 
 # Get your current IP
 alias myip='curl http://ipecho.net/plain; echo'
-
-# Docker
-alias docker='sudo docker'
