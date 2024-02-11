@@ -1,13 +1,14 @@
 [core]
 	editor = vim
 [alias]
-	graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white) %s%C(reset) %C(bold yellow) - %an%C(reset)%C(bold red)%d%C(reset)'
-	br = branch --format='%(HEAD) %(color:bold red)%(refname:short)%(color:reset) - %(color:bold green)(%(committerdate:relative)) %(color:reset)%(contents:subject) %(color:bold yellow)- %(authorname)' --sort=-committerdate
-	pr = pull --rebase
-	co = checkout
 	amend = commit --amend --no-edit
-	rom = rebase -i origin/main
+	br = branch --format='%(HEAD) %(color:bold red)%(refname:short)%(color:reset) - %(color:bold green)(%(committerdate:relative)) %(color:reset)%(contents:subject) %(color:bold yellow)- %(authorname)' --sort=-committerdate
+	brd = branch -D
+	co = checkout
+	graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white) %s%C(reset) %C(bold yellow) - %an%C(reset)%C(bold red)%d%C(reset)'
 	mom = merge origin/main
+	pr = pull --rebase
 	review = !git push origin HEAD -u
+	rom = rebase -i origin/main
 [fetch]
 	prune = true
