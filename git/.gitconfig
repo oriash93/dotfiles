@@ -9,6 +9,9 @@
 	mom = merge origin/main
 	pr = pull --rebase
 	review = !git push origin HEAD -u
-	rom = rebase -i origin/main
+	rom = rebase origin/main
+	romi = rebase origin/main -i
 [fetch]
 	prune = true
+[push]
+	autoSetupRemote = true
