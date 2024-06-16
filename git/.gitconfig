@@ -15,3 +15,4 @@
 	prune = true
 [push]
 	autoSetupRemote = true
+	default = current
