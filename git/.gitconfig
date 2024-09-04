@@ -6,11 +6,12 @@
 	brd = branch -D
 	co = checkout
 	graph = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%cr)%C(reset) %C(white) %s%C(reset) %C(bold yellow) - %an%C(reset)%C(bold red)%d%C(reset)'
-	mom = merge origin/main
+	mom = merge $(git rev-parse --abbrev-ref origin/HEAD)
 	pr = pull --rebase
 	review = !git push origin HEAD -u
-	rom = rebase origin/main
-	romi = rebase origin/main -i
+	rom = rebase $(git rev-parse --abbrev-ref origin/HEAD)
+	romi = rebase $(git rev-parse --abbrev-ref origin/HEAD) -i
+	undo = git reset --soft HEAD^
 [fetch]
 	prune = true
 [push]
